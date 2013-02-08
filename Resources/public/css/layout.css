@@ -134,10 +134,45 @@ table.formTable td {
     
 .alignBottom {
     vertical-align: bottom;}
-
+    
 /* Forms */
 .formTable input[type=text] {
     width: 100%;}
+    
+.formRow {
+    border-bottom: 1px solid #F1F1F2;
+    padding: 0.5em;
+    overflow: hidden;}
+    
+.formRow label {
+    color: #666666;
+    font-weight: bold;
+    width: 30%;
+    float: left;}
+    
+.formRow input[type=text], .formRow textarea, .formRow select {
+    width: 60%;}
+    
+.formRow input.short {
+    width: 25%;}
+    
+.formRow div {
+    overflow: hidden;}
+    
+.formRow div label {
+    float: none;
+    font-weight: normal;
+    float: left;
+    margin: 0.2em 0;
+    color: #000000;}
+    
+.formRow input[type=radio], .formRow input[type=checkbox] {
+    float: left;
+    clear: left;
+    margin: 0.3em;}
+    
+button[type=submit] {
+    float: right;}
     
 /* Navigation */
 ul.nav {
