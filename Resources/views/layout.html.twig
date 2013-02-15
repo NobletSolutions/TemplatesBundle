@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="robots" content="index, follow" />
@@ -12,32 +12,30 @@
         <meta charset="UTF-8">
 
         <link rel="shortcut icon" href="/favicon.png" />
-        <link rel="stylesheet" type="text/css" media="screen" href="/bundles/nstemplates/css/placeholders.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="/bundles/nstemplates/css/layout.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="/bundles/nstemplates/css/theme.css" />
-        <!--[if lte IE 8]>
-        <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css" />
-        <![endif]-->
-        
-        <title>Sales Pro 2.0</title>
+        {%block stylesheets %}
+            <link rel="stylesheet" type="text/css" media="screen" href="/bundles/nstemplates/css/layout.css" />
+            <link rel="stylesheet" type="text/css" media="screen" href="/bundles/nstemplates/css/theme.css" />
+            <!--[if lte IE 8]>
+            <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css" />
+            <![endif]-->
+        {%endblock %}
 
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0//prototype.js"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3//scriptaculous.js"></script>
+        <title>{%block htmltitle %}NS Templates{%endblock%}</title>
+
+        {% block javascripts %}
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js"></script>
+        {% endblock %}
     </head>
-    
-  <head>
-  <body>
-	{%block menu %}
-	{%endblock%}
+    <body>
+        <div id="header">
+            {%block header %}
+            {%endblock%}
+        </div>
 
-    <div id="main_content">
-        <div class="layoutSection">
-            {%block title %}
+        <div id="main_content">
+            {%block body %}
             {%endblock %}
         </div>
-            
-        {%block body %}
-        {%endblock %}
-    </div>
-    
-  </body></html>
+    </body>
+</html>
