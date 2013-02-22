@@ -252,3 +252,189 @@ ul.nav a:hover {
     
 ul.nav li li:hover {
     background: transparent;}
+    
+/* Calendar */
+.calendarTable {
+    border-collapse: collapse;
+    width: 100%;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    margin: 0.5em 0 1em 0;
+    border: none;}
+    
+.calendarTable td {
+    padding: 0;}
+    
+.calendarTable td.calendarDay {
+    height: 5em;
+    background: #f7f7f7;}
+    
+.calendarTable td.calendarDay.hasEvent {
+    height: 5em;
+    background: #eeeeee;}
+
+.calendarTable #calendarDate {
+    margin: 0 0 0 1em;
+    text-transform: capitalize;
+    font-size: 1.6em;}
+    
+.calendarTable #calendarYear {
+    font-weight: bold;
+    margin: 0 1em 0 0;}
+    
+.calendarTable a.monthNav span {
+    position: absolute;
+    left: -999em;}
+    
+.calendarTable a.monthNav:hover {
+    border-color: #000000;}
+    
+.calendarTable a.nextMonth {
+    background: url(/images/icons/month_next.png) center center no-repeat;}
+    
+.calendarTable a.nextMonth:hover {
+    background-image: url(/images/icons/month_next_inverted.png);}
+    
+.calendarTable a.nextYear {
+    background: url(/images/icons/year_next.png) center center no-repeat;}
+    
+.calendarTable a.nextYear:hover {
+    background-image: url(/images/icons/year_next_inverted.png);}
+    
+.calendarTable a.prevMonth {
+    background: url(/images/icons/month_prev.png) center center no-repeat;}
+    
+.calendarTable a.prevMonth:hover {
+    background-image: url(/images/icons/month_prev_inverted.png);}
+    
+.calendarTable a.prevYear {
+    background: url(/images/icons/year_prev.png) center center no-repeat;}
+    
+.calendarTable a.prevYear:hover {
+    background-image: url(/images/icons/year_prev_inverted.png);}
+
+.calendarTable .calendarNavigation {
+    text-align: center;
+    padding: 0.5em;}
+    
+.calendarTable .calendarNavigation a {
+    margin: 0.5em;
+    padding: 0.5em;
+    opacity: 0.85;}
+    
+.calendarTable .calendarNavigation a:hover {
+    opacity: 1;}
+
+.calendarTable th {
+    width: 14%;
+    background: #E6E4E4;
+    border: 1px solid #888888;
+    font-weight: normal;
+    font-size: 1.2em;}
+    
+.calendarTable tbody {
+    width: 100%;}
+    
+.calendarTable tbody td {
+    border: 1px solid #888888;
+    color: #888888;
+    border-top: none;
+    width: 14%;
+    vertical-align: top;
+    overflow: hidden;}
+    
+.calendarTable span.calendarDayNum {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 0.2em;
+    display: block;
+    text-align: right;}
+    
+.calendarTable div.calendarEvent {
+    clear: both;
+    border: 1px solid #888888;
+    border-width: 0 0 1px 0;
+    background: #eeeeee;
+    padding: 0 0 0 0.85em;
+    cursor: pointer;
+    overflow: hidden;
+    height: 2.5em;}
+    
+.calendarTable div.calendarEvent.event_0 {
+    background: #EEDFDF;}
+    
+.calendarTable div.calendarEvent.event_1 {
+    background: #EEEEDF;}
+    
+.calendarTable div.calendarEvent.event_2 {
+    background: #E2EEDF;}
+    
+.calendarTable div.calendarEvent.event_3 {
+    background: #DFEEEE;}
+    
+.calendarTable div.calendarEvent.event_4 {
+    background: #DFE0EE;}
+    
+.calendarTable div.calendarEvent > div {
+    background: #fafafa;
+    padding: 0.2em;
+    font-size: 0.85em;
+    cursor: auto;}
+    
+.calendarTable div.calendarEvent:hover > div {
+    font-size: 1em;
+    position: absolute;
+    width: 22%;
+    border: 1px solid #888888;
+    padding: 1em;
+    box-shadow: 2px 2px 4px -2px rgba(0, 0, 0, 0.6);}
+    
+.calendarTable div.calendarEvent:hover span.eventName {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 0 0 0.2em 0;}
+    
+.calendarTable div.calendarEvent:hover div.eventDescription {
+    display: block;
+    margin: 0.5em 0;}
+    
+.calendarTable div.calendarEvent span.eventField {
+    display: block;}
+    
+.calendarTable div.calendarEvent span.eventFieldLabel {
+    font-weight: bold;}
+    
+.calendarTable div.calendarEvent span.eventCategory {
+    font-style: italic;}
+    
+.calendarTable div.calendarEvent div.eventDescription {
+    display: none;}
+    
+.calendarTable div.calendarEvent span.eventCategory:after {
+    content: ' – ';}
+    
+.calendarTable span.calendarDayNum + div.calendarEvent {
+    border-top-width: 1px;}
+    
+.calendarTable div.calendarDayWrapper a.calendarEventLightBlue, .calendarEventLightBlue {
+   background-color: #A6A7CF;}
+   
+.calendarTable div.calendarDayWrapper a.calendarEventDarkBlue, .calendarEventDarkBlue {
+   background-color: #626BAC;}
+   
+.calendarTable div.calendarDayWrapper a.calendarEventYellow, .calendarEventYellow {
+   background-color: #FFAA00;}
+   
+.calendarTable div.calendarDayWrapper a.calendarEventRed, .calendarEventRed {
+   background-color: #870C0C;}
+   
+.calendarTable div.calendarDayWrapper a.calendarEventGreen, .calendarEventGreen {
+   background-color: #578045;}
+   
+.calendarTable div.calendarDayWrapper a.calendarEventPurple, .calendarEventPurple {
+   background-color: #8000FF;}
+   
+.calendarTable td.today, .calendarTable .calendarEventToday, .calendarTable td.today {
+    background: #F5EDB7;}
