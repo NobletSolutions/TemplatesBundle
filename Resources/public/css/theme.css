@@ -438,3 +438,72 @@ ul.nav li li:hover {
    
 .calendarTable td.today, .calendarTable .calendarEventToday, .calendarTable td.today {
     background: #F5EDB7;}
+    
+/* Messages */
+div.bannerMessage {
+    background: #357ABE;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    overflow: hidden;}
+    
+div.bannerMessage h3 {
+    float: left;
+    font-size: 2em;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0.8em 1.5em 1em 1em;
+    background: url(/bundles/nobletsolutionsnedco/images/icons/alert-transparent.png) bottom center no-repeat;
+    padding-bottom: 55px;}
+    
+div.bannerMessage div.messageContent {
+    overflow: hidden;}
+    
+div.bannerMessage div.messageContent h4 {
+    font-size: 1.8em;
+    margin: 1em 0 0.5em 0;
+    padding: 0;
+    width: 80%;}
+    
+div.bannerMessage p {
+    font-size: 1.4em;
+    margin: 0.5em 0;
+    width: 80%;}
+    
+div.bannerMessage div.messageCommit {
+    float: right;
+    margin: 1em;
+    font-size: 1.4em;}
+    
+div.bannerMessage button, div.bannerMessage a.button {
+    background: #4A4A4C;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 0.2em;
+    margin: 1em;
+    font-size: 1em;
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+    cursor: default;}
+    
+div.bannerMessage button:hover, div.bannerMessage a.button:hover {
+    color: #4a4a4c;
+    background: #ffffff;
+    border-color: #4a4a4c;}
+    
+div.bannerMessage.success {
+    background-color: #35BE37;}
+    
+div.bannerMessage.success h3 {
+    background-image: url(/bundles/nobletsolutionsnedco/images/icons/check-transparent.png);}
+    
+div.bannerMessage.error {
+    background-color: #BE5035;}
+    
+div.bannerMessage.error h3 {
+    background-image: url(/bundles/nobletsolutionsnedco/images/icons/error-transparent.png);}
+    
+div.bannerMessage.critical {
+    background-color: #BE3535;}
+    
+div.bannerMessage.critical h3 {
+    background-image: url(/bundles/nobletsolutionsnedco/images/icons/alert.png);}
