@@ -34,6 +34,56 @@
             {%endblock%}
         </div>
 
+        {%block message %}
+            {% for flashMessage in app.session.flashbag.get('error') %}
+                <div class="bannerMessage critical">
+                    <h3>{{flashMessage.header}}</h3>
+                    <div class="messageContent">
+                      <h4>{{flashMessage.title}}</h4>
+                      <p>{{flashMessage.message}}</p>
+                      <div class="messageCommit">
+                         <button>{{flashMessage.buttonMessage}}</button>
+                      </div>
+                    </div>
+                </div>
+            {% endfor %}
+            {% for flashMessage in app.session.flashbag.get('warning') %}
+                <div class="bannerMessage error">
+                    <h3>{{flashMessage.header}}</h3>
+                    <div class="messageContent">
+                      <h4>{{flashMessage.title}}</h4>
+                      <p>{{flashMessage.message}}</p>
+                      <div class="messageCommit">
+                         <button>{{flashMessage.buttonMessage}}</button>
+                      </div>
+                    </div>
+                </div>
+            {% endfor %}
+            {% for flashMessage in app.session.flashbag.get('success') %}
+                <div class="bannerMessage success">
+                    <h3>{{flashMessage.header}}</h3>
+                    <div class="messageContent">
+                      <h4>{{flashMessage.title}}</h4>
+                      <p>{{flashMessage.message}}</p>
+                      <div class="messageCommit">
+                         <button>{{flashMessage.buttonMessage}}</button>
+                      </div>
+                    </div>
+                </div>
+            {% endfor %}
+            {% for flashMessage in app.session.flashbag.get('message') %}
+                <div class="bannerMessage">
+                    <h3>{{flashMessage.header}}</h3>
+                    <div class="messageContent">
+                      <h4>{{flashMessage.title}}</h4>
+                      <p>{{flashMessage.message}}</p>
+                      <div class="messageCommit">
+                         <button>{{flashMessage.buttonMessage}}</button>
+                      </div>
+                    </div>
+                </div>
+            {% endfor %}
+       {%endblock%}
 
         <div id="main_content">
             {%block body %}
