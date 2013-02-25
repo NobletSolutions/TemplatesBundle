@@ -13,7 +13,7 @@ Event.observe(window, 'load', function(event)
                     duration: 0.8,
                     afterFinish: function()
                     {
-                        m.remove()
+                        m.remove();
                     }
                 });
             });

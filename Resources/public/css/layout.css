@@ -48,6 +48,9 @@ body {
 table.collapseBorder {
     border-collapse: collapse;}
     
+div.clear {
+    clear: both;}
+    
 /* Blocks */
 
 /* -- layoutSection */
