@@ -59,10 +59,12 @@ div.clear {
     overflow: hidden;}
 
 /* -- statusBar */
-.statusBar {}
+.statusBar {
+    overflow: hidden;}
 
 .statusInfo {
-    width: 100%;}
+    width: 100%;
+    border-collapse: collapse;}
 
 .statusInfo th {
     width: 50%;
