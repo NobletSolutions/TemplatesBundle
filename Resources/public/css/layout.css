@@ -204,3 +204,13 @@ ul.nav ul li {
     
 ul.nav li:hover ul {
     left: auto;}
+    
+/* Paginator */
+div.paginator {
+    margin: 1em;
+    overflow: hidden;}
+    
+div.paginator a {
+    text-decoration: none;
+    padding: 0.3em 0.5em;
+    float: left;}

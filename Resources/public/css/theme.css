@@ -507,3 +507,35 @@ div.bannerMessage.critical {
     
 div.bannerMessage.critical h3 {
     background-image: url(/bundles/nobletsolutionsnedco/images/icons/alert.png);}
+    
+/* Paginator */
+div.paginator a {
+    color: #666666;
+    font-weight: bold;
+    font-size: 1.2em;}
+    
+div.paginator a:hover {
+    color: #F99D27;}
+    
+div.paginator a.current {
+    color: #888888;
+    cursor: default;
+    font-weight: normal;}
+    
+div.paginator a.paginatorFirst {
+    background: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow-stop-180.png) left center no-repeat;
+    padding-left: 20px;}
+    
+div.paginator a.paginatorPrev {
+    border-right: 1px solid #F99D27;
+    background: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow-180.png) left center no-repeat;
+    padding-left: 20px;}
+    
+div.paginator a.paginatorNext {
+    border-left: 1px solid #F99D27;
+    background: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow.png) right center no-repeat;
+    padding-right: 20px;}
+    
+div.paginator a.paginatorLast {
+    background: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow-stop.png) right center no-repeat;
+    padding-right: 20px;}
