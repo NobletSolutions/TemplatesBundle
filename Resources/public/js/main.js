@@ -1,5 +1,7 @@
 Event.observe(window, 'load', function(event)
 {
+    activateFilters();
+    
     var messages = $$('div.bannerMessage');
     if(messages)
     {

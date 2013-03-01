@@ -190,7 +190,7 @@ table.formTable p.formNote {
     color: #4C4B2C;}
     
 /* Forms */
-button[type=submit] {
+button[type=submit], button[type=reset] {
     background: #7FB23C;
     border: 3px solid #ffffff;
     box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.6);
@@ -199,10 +199,17 @@ button[type=submit] {
     color: #ffffff;
     font-weight: bold;}
     
-button[type=submit]:hover {
-    background: #72A036;}
+button[type=reset] {
+    background: #3C6BB2 url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow_circle_315.png) 95% center no-repeat;
+    padding-right: 20px;}
     
-button[type=submit]:active {
+button[type=submit]:hover {
+    background-color: #72A036;}
+    
+button[type=reset]:hover {
+    background-color: #3660A0;}
+    
+button[type=submit]:active, button[type=reset]:active {
     box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.2);}
     
 /* Nav */
@@ -539,3 +546,49 @@ div.paginator a.paginatorNext {
 div.paginator a.paginatorLast {
     background: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow-stop.png) right center no-repeat;
     padding-right: 20px;}
+    
+/* Filters */
+div.filters {
+    background: #4A4A4C;
+    color: #cccccc;
+    box-shadow: 2px 2px 4px -2px rgba(0, 0, 0, 0.6);}
+    
+div.filters div.filterCol {
+    padding: 1%;
+    border-left: 1px solid #555555;}
+    
+div.filters div.filterRow {
+    margin: 0.5em 0;
+    border-bottom: 1px solid #555555;
+    padding-bottom: 0.2em;}
+    
+div.filters label {
+    display: block;
+    font-weight: bold;}
+    
+div.filters div.filterRow input, div.filters div.filterRow select {
+    width: 98%;}
+    
+div.filters button {
+    float: left;
+    margin: 0 0.5em;}   
+    
+div.filters button.filter {
+    background: #7FB23C url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/magnifier.png) 95% center no-repeat;
+    padding-right: 20px;}
+    
+div.filters button.filter:hover {
+    background-color: #72A036;}
+    
+div.filters a.filterSwitch {
+    background: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/chevron-expand.png) 3px center no-repeat;
+    padding-left: 20px;
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 1.2em;}
+    
+div.filters a.filterSwitch:hover {
+    color: #ffffff;}
+    
+div.filters.open a.filterSwitch {
+    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/chevron.png);}
