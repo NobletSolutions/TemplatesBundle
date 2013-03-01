@@ -1,6 +1,7 @@
 Event.observe(window, 'load', function(event)
 {
     activateFilters();
+    activateSessionMenu();
     
     var messages = $$('div.bannerMessage');
     if(messages)

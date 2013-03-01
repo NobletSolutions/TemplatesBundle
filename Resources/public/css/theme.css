@@ -406,3 +406,34 @@ div.filters a.filterSwitch:hover {
     
 div.filters.open a.filterSwitch {
     background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/chevron.png);}
+    
+/* Session Menu */
+#session_menu {
+    -moz-border-radius: 0 10px 10px 0;
+    -o-border-radius: 0 10px 10px 0;
+    -webkit-border-radius: 0 10px 10px 0;
+    border-radius: 0 10px 10px 0;
+    border: 3px double #666666;
+    border-width: 3px 3px 3px 0;
+    box-shadow: 2px 2px 4px -2px rgba(0, 0, 0, 0.6);}
+    
+#session_trigger {
+    border: 3px double #666666;
+    border-width: 3px 3px 3px 0;
+    -moz-border-radius: 0 10px 10px 0;
+    -o-border-radius: 0 10px 10px 0;
+    -webkit-border-radius: 0 10px 10px 0;
+    border-radius: 0 10px 10px 0;
+    background: #ffffff url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/control-skip-180.png) center center no-repeat;
+    width: 18px;
+    height: 18px;}
+    
+#session_trigger:hover {
+    background-color: #cccccc;}
+     
+#session_trigger span {
+    margin-left: -999em;
+    position: absolute;}
+    
+#session_menu.closed #session_trigger {
+    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/control-skip.png);}
