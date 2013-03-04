@@ -11,6 +11,7 @@ class FlashMessage
     
     public function __construct($header = null, $title = null, $message = null, $buttonMessage = null)
     {
+        $this->header        = $header;
         $this->title         = $title;
         $this->message       = $message;
         $this->buttonMessage = $buttonMessage;
