@@ -146,6 +146,14 @@ colgroup {
 colgroup:first-child {
     border-left: none;}
     
+table.dataTable input.short, table.dataTable input[type=number] {
+    width: 5em;}
+    
+table.dataTable select {
+    max-width: 8em;}
+    
+table.dataTable textarea {}
+    
 /* Forms */
 input[type=text] {
     border: 1px solid #C6C8CA;
