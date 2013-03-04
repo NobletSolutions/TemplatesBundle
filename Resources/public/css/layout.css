@@ -179,6 +179,16 @@ table.formTable td {
 button[type=submit] {
     float: right;}
     
+.formRow div.autocompleter {
+    width: 60%;
+    display: inline-block;}
+    
+.formRow div.autocompleter input {
+    width: 95%;}
+    
+.formRow div.autocompleter a.autocompleteDelete {
+    font-size: 0.85em;}
+    
 /* Navigation */
 ul.nav {
     list-style-type: none;
