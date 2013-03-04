@@ -426,7 +426,8 @@ div.filters.open a.filterSwitch {
     border-radius: 0 10px 10px 0;
     background: #ffffff url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/control-skip-180.png) center center no-repeat;
     width: 18px;
-    height: 18px;}
+    height: 18px;
+    outline: none;}
     
 #session_trigger:hover {
     background-color: #cccccc;}
