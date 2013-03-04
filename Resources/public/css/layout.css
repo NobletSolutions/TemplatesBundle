@@ -254,7 +254,8 @@ div.filters a.filterSwitch {
     background: #ffffff;
     position: absolute;
     top: 20%;
-    width: 25%;}
+    width: 25%;
+    z-index: 500;}
     
 #session_menu_content {
     overflow: hidden;}
@@ -268,3 +269,23 @@ div.filters a.filterSwitch {
     font-size: 1.2em;
     background: #ffffff;}
     
+#session_menu_content ul.nav {
+    margin: 0;
+    padding: 0;
+    width: 100%;}
+    
+#session_menu_content ul.nav li {
+    width: 100%;
+    display: block;
+    float: none;}
+    
+#session_menu_content ul.nav li ul {
+    margin-left: 25%;
+    margin-top: -1.6em;}
+    
+#session_menu_content ul.nav li:hover ul {
+    left: auto;}
+    
+#session_menu_content ul.nav a, #session_menu_content ul.nav li > span {
+    padding: 0.2em 0.5em;
+    display: block;}
