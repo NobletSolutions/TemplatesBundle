@@ -437,4 +437,11 @@ div.filters.open a.filterSwitch {
     position: absolute;}
     
 #session_menu.closed #session_trigger {
-    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/control-skip.png);}
+    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/control-skip.png);
+    margin-left: -10px;
+    position: absolute;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 3px double #666666;}

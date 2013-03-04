@@ -10,6 +10,7 @@ activateSessionMenu = function()
         {
             options = {
                 duration: 0.5,
+                scaleContent: false,
                 afterFinish: function()
                 {
                     sm.toggleClassName('open').toggleClassName('closed');

@@ -25,7 +25,10 @@ activateFilters = function()
             Event.stop(ev);
         });
         
-        el.addClassName('closed');
-        f.hide();
+        if(!el.hasClassName('open'))
+        {
+            el.addClassName('closed');
+            f.hide();
+        }
     });
 };
