@@ -116,6 +116,9 @@ div.clear {
 .column:last-child .panel {
     margin-right: 0;}
     
+.column > .column:last-child .panel {
+    margin-right: 1em;}
+    
 /* Panels */
 table.dataTable {
     width: 100%;}
