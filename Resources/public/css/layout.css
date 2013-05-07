@@ -68,7 +68,8 @@ div.clear {
 
 .statusInfo th {
     width: 50%;
-    text-align: left;}
+    text-align: left;
+    padding-left: 1em;}
     
 .statusTitle {
     margin: 0.2em 0.5em;}
@@ -114,6 +115,9 @@ div.clear {
     
 .column:last-child .panel {
     margin-right: 0;}
+    
+.column > .column:last-child .panel {
+    margin-right: 1em;}
     
 /* Panels */
 table.dataTable {
