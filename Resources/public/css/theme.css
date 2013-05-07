@@ -467,3 +467,24 @@ div.filters.open a.filterSwitch {
     
 #session_menu_content ul.nav a:hover {
     background: transparent;}
+    
+/* Contacts */
+div.containerPanel {
+    background: #e3e3e3;
+    overflow: hidden;}
+    
+div.contact {
+    width: 22em;
+    float: left;
+    margin: 0.5em;
+    padding: 0.5em;
+    background: #ffffff;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.6);}
+    
+div.contact h3 {
+    font-weight: normal;
+    font-size: 1.8em;
+    margin: 0.2em 0;}
+    
+div.contact p.contactRow {
+    margin: 0.2em 0;}
