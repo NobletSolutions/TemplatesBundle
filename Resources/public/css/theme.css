@@ -492,7 +492,16 @@ div.contact {
 div.contact h3 {
     font-weight: normal;
     font-size: 1.8em;
-    margin: 0.2em 0;}
+    margin: 0.2em 0;
+    cursor: pointer;
+    background: #eeeeee;
+    padding: 0.2em;}
+    
+div.contact h3:hover {
+    background: #dddddd;}
     
 div.contact p.contactRow {
     margin: 0.2em 0;}
+    
+div.contact.collapse {
+    left: -999em;}
