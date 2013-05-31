@@ -110,6 +110,12 @@ div.clear {
     margin: 1em 1em 1em 0;
     overflow: hidden;}
     
+.popupOverlay {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    overflow: hidden;}
+    
 .column:first-child .panel {
     margin-left: 0;}
     
