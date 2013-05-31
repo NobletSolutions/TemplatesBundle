@@ -67,6 +67,12 @@ h2 {
 
 .dataPanel {
 	background: #fcfcfc;}
+	
+.dataPanel .panel {
+    background: #EBECEC;}
+    
+.dataPanel .dataPanel {
+    background #fcfcfc;}
 
 .controlPanel {
 	background: #C6C8CA;}

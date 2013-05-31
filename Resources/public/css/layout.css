@@ -159,6 +159,10 @@ table.formTable td {
     width: 30%;
     float: left;}
     
+.formRow label.clear {
+    display: block;
+    float: none;}
+    
 .formRow input[type=text], .formRow textarea, .formRow select {
     width: 60%;}
     
