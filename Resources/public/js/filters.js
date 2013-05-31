@@ -7,7 +7,7 @@ activateFilters = function()
         var f  = el.down('form');
         var sw = el.down('a.filterSwitch');
         
-        if(sw)
+        if(f && sw)
         {
             sw.observe('click', function(ev)
             {
