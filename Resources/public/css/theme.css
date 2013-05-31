@@ -2,7 +2,7 @@
 html {
     font-size: 0.625em; /* Base font size */}
     
-th, td, p, li, label, input, textarea, select {
+th, td, p, li, label, input, textarea, select, .plainText {
     font-size: 1.2em;
 }
 
@@ -48,6 +48,9 @@ h2 {
 .statusBar {
     background: #00A0DC;
     color: #ffffff;}
+    
+.statusBarAdditional {
+    margin-top: -1em;}
     
 .statusInfo td {
     background: #A7A9AC;
@@ -399,17 +402,24 @@ div.filters button.filter {
 div.filters button.filter:hover {
     background-color: #72A036;}
     
-div.filters a.filterSwitch {
+div.filters a.filterSwitch, a.panelSwitch {
     background: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/chevron-expand.png) 3px center no-repeat;
     padding-left: 20px;
     text-decoration: none;
     color: #cccccc;
     font-size: 1.2em;}
     
-div.filters a.filterSwitch:hover {
+a.panelSwitch {
+    font-size: inherit;}
+    
+a.panelSwitch.alignRight {
+    float: right;
+    margin-right: 1em;}
+    
+div.filters a.filterSwitch:hover, a.panelSwitch:hover {
     color: #ffffff;}
     
-div.filters.open a.filterSwitch {
+div.filters.open a.filterSwitch, a.panelSwitch.open {
     background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/chevron.png);}
     
 /* Session Menu */
