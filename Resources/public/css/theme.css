@@ -164,7 +164,7 @@ colgroup:first-child {
     border-left: none;}
     
 /* Forms */
-input[type=text], input[type=number], input[type=date] {
+input[type=text], input[type=number], input[type=date], input[type=search] {
     border: 1px solid #C6C8CA;
     border-right-color: #F1F1F2;
     border-bottom-color: #F1F1F2;
@@ -384,20 +384,33 @@ div.filters {
     color: #cccccc;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);}
     
+div.filters.search {
+    position: absolute;
+    z-index: 200;
+    overflow: visible;}
+    
+div.filters.search a.filterSwitch {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: -1.8em;}
+    
 div.filters div.filterCol {
     padding: 1%;
     border-left: 1px solid #555555;}
     
-div.filters div.filterRow {
+div.filters div.filterRow,  div.filters div.formRow {
     margin: 0.5em 0;
     border-bottom: 1px solid #555555;
     padding-bottom: 0.2em;}
     
 div.filters label {
     display: block;
+    color: #cccccc;
     font-weight: bold;}
     
-div.filters div.filterRow input, div.filters div.filterRow select {
+div.filters div.filterRow input, div.filters div.filterRow select,
+div.filters div.formRow input, div.filters div.formRow select {
     width: 98%;}
     
 div.filters button {
