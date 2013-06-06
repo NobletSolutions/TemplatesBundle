@@ -7,3 +7,10 @@
     </div>
 {% endspaceless %}
 {% endblock form_row %}
+
+{% block datepicker %}
+{% spaceless %}
+    {{ block('text_widget') }}
+    <script type="text/javascript" > var picker = new Pikaday({field: $('sdate')}); </script>
+{% endspaceless %}
+{% endblock %}
