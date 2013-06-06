@@ -8,9 +8,9 @@
 {% endspaceless %}
 {% endblock form_row %}
 
-{% block datepicker %}
+{% block datepicker_widget %}
 {% spaceless %}
-    {{ block('text_widget') }}
-    <script type="text/javascript" > var picker = new Pikaday({field: $('sdate')}); </script>
+    {{ form_widget(form) }}
+    <script type="text/javascript" > var picker = new Pikaday({field: $('{{id}}')}); </script>
 {% endspaceless %}
 {% endblock %}
