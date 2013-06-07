@@ -205,6 +205,9 @@ button[type=submit] {
 .formRow div.autocompleter a.autocompleteDelete {
     font-size: 0.85em;}
     
+.formRow div.autocomplete-token {
+    text-align: left;}
+    
 /* Navigation */
 ul.nav {
     list-style-type: none;
