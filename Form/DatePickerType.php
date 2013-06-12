@@ -2,35 +2,33 @@
 
 namespace NS\TemplatesBundle\Form;
 
-use \Symfony\Component\Form\Extension\Core\Type\DateType;
-use \Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\Extension\Core\DataTransformer\DateTimeToLocalizedStringTransformer;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\Form\FormView;
+use Symfony\Component\Form\FormInterface;
 
 /**
  * A Date picker text type
  *
  * @author gnat
  */
-class DatePickerType extends TextType
+class DatePickerType extends DateType
 {
     const DEFAULT_FORMAT = \IntlDateFormatter::MEDIUM;
 
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        $dateFormat = self::DEFAULT_FORMAT;
-        $timeFormat = \IntlDateFormatter::NONE;
-        $calendar   = \IntlDateFormatter::GREGORIAN;
-        $pattern    = 'Y-M-d';
-        
-        $builder->addViewTransformer(new DateTimeToLocalizedStringTransformer(
-                null,
-                null,
-                $dateFormat,
-                $timeFormat,
-                $calendar,
-                $pattern
-            ));
+        parent::setDefaultOptions($resolver);
+        $resolver->setDefaults(array(
+            'widget'    => 'single_text',
+            'compound'  => false,
+        ));
+    }
+
+    public function finishView( FormView $view, FormInterface $form, array $options)
+    {
+        parent::finishView($view, $form, $options);
+        $view->vars['type'] = 'text';
     }
 
     public function getName()
