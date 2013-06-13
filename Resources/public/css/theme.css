@@ -214,7 +214,8 @@ button[type=submit], button[type=reset], a.button {
     border-radius: 6px;
     padding: 0.2em;
     color: #ffffff;
-    font-weight: bold;}
+    font-weight: bold;
+    text-decoration: none;}
     
 button[type=reset], a.button.reset {
     background: #3C6BB2 url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow_circle_315.png) 95% center no-repeat;
