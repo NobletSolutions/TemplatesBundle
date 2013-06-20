@@ -207,21 +207,47 @@ table.formTable p.formNote {
     color: #4C4B2C;}
     
 /* Forms */
-button[type=submit], button[type=reset], a.button {
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    height: 0;}
+    
+button, a.button {
     background: #7FB23C;
     border: 3px solid #ffffff;
     box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.6);
     border-radius: 6px;
-    padding: 0.2em;
+    padding: 0.2em 0.5em;
+    line-height: 1.1;
     color: #ffffff;
     font-weight: bold;
-    text-decoration: none;}
+    text-decoration: none;
+    font-size: 1.4em;
+    margin: 0.5em;
+    font-family: inherit;
+    background: #B2AE3C 95% center no-repeat;
+    cursor: default;
+    display: inline-block;}
+    
+button[type=reset], button[type=submit], button.cancel, a.button.submit, a.button.reset, a.button.cancel {
+    padding-right: 22px;}
     
 button[type=reset], a.button.reset {
-    background: #3C6BB2 url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow_circle_315.png) 95% center no-repeat;
-    padding-right: 20px;}
+    background-color: #3C6BB2;
+    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow_circle_315.png);}
     
-button[type=submit]:hover, a.button:hover {
+button.cancel, a.button.cancel {
+    background-color: #B2653C;
+    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/cross_circle_frame.png);}
+    
+button.cancel:hover, a.button.cancel:hover {
+    background-color: #995533;}
+    
+button[type=submit], a.button.submit {
+    background-color: #7FB23C;
+    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/tick_circle_frame.png);}
+    
+button[type=submit]:hover, a.button.submit:hover {
     background-color: #72A036;}
     
 button[type=reset]:hover, a.button.reset:hover {
@@ -229,6 +255,9 @@ button[type=reset]:hover, a.button.reset:hover {
     
 button[type=submit]:active, button[type=reset]:active, a.button:active, a.button.reset:active {
     box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.2);}
+    
+button:hover, a.button:hover {
+    background-color: #9B9834;}
     
 /* Nav */
 ul.nav {
