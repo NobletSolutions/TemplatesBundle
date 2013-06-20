@@ -546,3 +546,9 @@ div.itemExpander h3 a {
     
 div.itemExpander h3 a:hover {
     color: #666666;}
+    
+/* Ajax */
+img.ajaxLoader {
+    margin: 1em auto;
+    display: block;
+}
