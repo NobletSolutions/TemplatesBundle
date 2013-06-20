@@ -2,7 +2,4 @@ parameters:
 #    ns.example.class: NS\TemplatesBundle\Example
 
 services:
-  ns.form.datepicker:
-      class: NS\TemplatesBundle\Form\DatePickerType
-      tags:
-        - { name: form.type, alias: datepicker }
+
