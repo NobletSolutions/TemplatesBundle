@@ -14,7 +14,13 @@ var activateAjaxLoaders = function()
                 var url    = loader.getAttribute('href');
                 
                 target.update('<img src="/bundles/nstemplates/images/ajax-loader.gif" alt="" class="ajaxLoader" />');
-                new Ajax.Updater(target, url);
+                new Ajax.Updater(target, url, {
+                    evalScripts: true,
+                    oncomplete: function() {
+                        var successEvent = new CustomEvent('ajaxUpdateSuccess');
+                        document.dispatchEvent(successEvent);
+                    }
+                });
             });
             
             loader.active = true;

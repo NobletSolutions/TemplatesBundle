@@ -12,3 +12,9 @@ Event.observe(document, 'hIncludeSuccess', function(event)
     activatePanelSwitches();
     activateAjaxLoaders();
 });
+
+Event.observe(document, 'ajaxUpdateSuccess', function(event)
+{
+    activatePanelSwitches();
+    activateAjaxLoaders();
+});
