@@ -25,28 +25,33 @@ var activatePanelSwitches = function()
 {
     $$('a.panelSwitch').each(function(a)
     {
-        var panel = $(a.getAttribute('data-target'));
-        
-        if(panel)
+        if(!a.activated)
         {
-            a.observe('click', function(ev)
-            {
-                options = {
-                    duration: 0.5,
-                    afterFinish: function()
-                    {
-                        panel.toggleClassName('open');
-                        a.toggleClassName('open');
-                    }
-                };
-                
-                if(panel.hasClassName('open'))
-                    Effect.BlindUp(panel, options);
-                else
-                    Effect.BlindDown(panel, options);
-            });
+            var panel = $(a.getAttribute('data-target'));
             
-            panel.hide();
+            if(panel)
+            {
+                a.observe('click', function(ev)
+                {
+                    options = {
+                        duration: 0.5,
+                        afterFinish: function()
+                        {
+                            panel.toggleClassName('open');
+                            a.toggleClassName('open');
+                        }
+                    };
+                    
+                    if(panel.hasClassName('open'))
+                        Effect.BlindUp(panel, options);
+                    else
+                        Effect.BlindDown(panel, options);
+                });
+                
+                panel.hide();
+            }
+            a.activated = true;
         }
+        
     });
 };

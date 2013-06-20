@@ -2,7 +2,7 @@
 html {
     font-size: 0.625em; /* Base font size */}
     
-th, td, p, li, label, input, textarea, select, .plainText {
+th, td, p, li, label, input, textarea, select, .plainText, .richTextContainer {
     font-size: 1.2em;
 }
 
@@ -63,14 +63,14 @@ h2 {
     
 /* panels */
 .panel {
-	box-shadow: 2px 2px 4px rgba(0,0,0,0.6);}
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.6);}
 
 .popupOverlay {
     background: rgba(0, 0, 0, 0.6);}
 
 .dataPanel {
-	background: #fcfcfc;}
-	
+    background: #fcfcfc;}
+    
 .dataPanel .panel {
     background: #EBECEC;}
     
@@ -78,8 +78,8 @@ h2 {
     background: #fcfcfc;}
 
 .controlPanel {
-	background: #C6C8CA;}
-	
+    background: #C6C8CA;}
+    
 .panelTitle {
     background: #00A2DD;
     color: #ffffff;
@@ -538,3 +538,11 @@ div.contact p.contactRow {
     
 div.contact.collapse {
     left: -999em;}
+    
+/* Calls */
+div.itemExpander h3 a {
+    color: #000000;
+    cursor: pointer;}
+    
+div.itemExpander h3 a:hover {
+    color: #666666;}

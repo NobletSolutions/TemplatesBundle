@@ -5,3 +5,8 @@ Event.observe(window, 'load', function(event)
     activateMessages();
     activatePanelSwitches();
 });
+
+Event.observe(document, 'hIncludeSuccess', function(event)
+{
+    activatePanelSwitches();
+});

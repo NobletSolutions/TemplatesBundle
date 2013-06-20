@@ -62,6 +62,8 @@ var hinclude;
       while (hinclude.buffer.length > 0) {
         var include = hinclude.buffer.pop();
         if (include[1].status === 200 || include[1].status === 304) {
+            var successEvent = new CustomEvent('hIncludeSuccess');
+            document.dispatchEvent(successEvent);
           include[0].innerHTML = include[1].responseText;
         }
         include[0].className = hinclude.classprefix + include[1].status;
@@ -203,7 +205,6 @@ var hinclude;
           }
         };
         @*/
-        // for Safari
         if (/WebKit/i.test(navigator.userAgent)) { // sniff
           window.__load_timer = setInterval(function () {
             if (/loaded|complete/.test(document.readyState)) {
