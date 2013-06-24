@@ -66,7 +66,7 @@ var activateDraggables = function()
                 handle: element.down('.panelTitle')?element.down('.panelTitle'):false,
                 starteffect: false,
                 endeffect:false
-            })
+            });
             
             element.isDraggable = true;
         };
