@@ -567,6 +567,21 @@ div.contact p.contactRow {
     
 div.contact.collapse {
     left: -999em;}
+
+/* Errors */
+div.fieldErrors {
+    clear: both;
+    color: #BA2200;
+    border: 1px solid #BA2200;
+    padding: 0.2em 0.5em 0.2em 24px;
+    margin: 0.2em 0;
+    background: #F2E8E5 url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/exclamation.png) 3px center no-repeat;}
+    
+div.fieldErrors + input {
+    box-shadow: inset 0 0 4px #BA2200;}
+    
+div.fieldErrors span.error {
+    display: block;}
     
 /* Calls */
 div.itemExpander h3 a {
