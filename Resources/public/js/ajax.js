@@ -16,7 +16,7 @@ var activateAjaxLoaders = function()
                 target.update('<img src="/bundles/nstemplates/images/ajax-loader.gif" alt="" class="ajaxLoader" />');
                 new Ajax.Updater(target, url, {
                     evalScripts: true,
-                    oncomplete: function() {
+                    onSuccess: function() {
                         var successEvent = new CustomEvent('ajaxUpdateSuccess');
                         document.dispatchEvent(successEvent);
                     }
