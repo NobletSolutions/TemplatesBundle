@@ -5,16 +5,19 @@ Event.observe(window, 'load', function(event)
     activateMessages();
     activatePanelSwitches();
     activateAjaxLoaders();
+    activateDraggables();
 });
 
 Event.observe(document, 'hIncludeSuccess', function(event)
 {
     activatePanelSwitches();
     activateAjaxLoaders();
+    activateDraggables();
 });
 
 Event.observe(document, 'ajaxUpdateSuccess', function(event)
 {
     activatePanelSwitches();
     activateAjaxLoaders();
+    activateDraggables();
 });

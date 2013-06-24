@@ -55,3 +55,20 @@ var activatePanelSwitches = function()
         
     });
 };
+
+var activateDraggables = function()
+{
+    $$('.draggable').each(function(element)
+    {
+        if(!element.isDraggable)
+        {
+            new Draggable(element, {
+                handle: element.down('.panelTitle')?element.down('.panelTitle'):false,
+                starteffect: false,
+                endeffect:false
+            })
+            
+            element.isDraggable = true;
+        };
+    });
+};
