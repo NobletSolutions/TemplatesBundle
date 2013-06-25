@@ -7,3 +7,15 @@
     </div>
 {% endspaceless %}
 {% endblock form_row %}
+
+{% block field_errors %}
+    {% if errors|length > 0 %}
+    <div class="fieldErrors">
+            {% for error in errors %}
+            <span class="val-error">
+                {{ error.messageTemplate|trans(error.messageParameters, 'validators') }}
+            </span>
+            {% endfor %}
+    </div>
+    {% endif %}
+{% endblock field_errors %}
