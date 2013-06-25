@@ -12,10 +12,23 @@
     {% if errors|length > 0 %}
     <div class="fieldErrors">
             {% for error in errors %}
-            <span class="val-error">
+            <span class="error">
                 {{ error.messageTemplate|trans(error.messageParameters, 'validators') }}
             </span>
             {% endfor %}
     </div>
     {% endif %}
 {% endblock field_errors %}
+
+{% block form_errors %}
+    {% if errors|length > 0 %}
+    <div class="fieldErrors formErrors">
+        <h3>This form is missing some required information, and could not be submitted.</h3>
+            {% for error in errors %}
+            <span class="error">
+                {{ error.messageTemplate|trans(error.messageParameters, 'validators') }}
+            </span>
+            {% endfor %}
+    </div>
+    {% endif %}
+{% endblock form_errors %}

@@ -582,11 +582,24 @@ div.fieldErrors {
     margin: 0.2em 0;
     background: #F2E8E5 url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/exclamation.png) 3px center no-repeat;}
     
+div.formErrors {
+    background: #F2E8E5;
+    padding: 0.5em 0.5em 0.5em 30px;
+    font-size: 1.2em;}
+    
+div.formErrors h3 {
+    padding-left: 24px;
+    margin: 0.2em 0 0.2em -24px;
+    background: #F2E8E5 url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/exclamation.png) 3px center no-repeat;}
+        
 div.fieldErrors + input {
     box-shadow: inset 0 0 4px #BA2200;}
     
 div.fieldErrors span.error {
     display: block;}
+    
+div.formErrors span.error {
+    margin: 0.2em;}
     
 /* Calls */
 div.itemExpander h3 a {
