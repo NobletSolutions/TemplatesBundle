@@ -8,11 +8,12 @@ Event.observe(window, 'load', function(event)
     activateDraggables();
 });
 
-Event.observe(document, 'hIncludeSuccess', function(event)
+Event.observe(document, 'hinclude:success', function(event)
 {
     activatePanelSwitches();
     activateAjaxLoaders();
     activateDraggables();
+    activateAutocompleters();
 });
 
 Event.observe(document, 'ajaxUpdateSuccess', function(event)
@@ -20,4 +21,5 @@ Event.observe(document, 'ajaxUpdateSuccess', function(event)
     activatePanelSwitches();
     activateAjaxLoaders();
     activateDraggables();
+    activateAutocompleters();
 });

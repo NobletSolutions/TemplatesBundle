@@ -63,8 +63,7 @@ var hinclude;
         var include = hinclude.buffer.pop();
         if (include[1].status === 200 || include[1].status === 304) {
             include[0].innerHTML = include[1].responseText;
-            var successEvent = new CustomEvent('hIncludeSuccess');
-            document.dispatchEvent(successEvent);
+            document.fire('hinclude:success');
         }
         include[0].className = hinclude.classprefix + include[1].status;
       }
