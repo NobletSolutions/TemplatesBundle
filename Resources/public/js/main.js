@@ -2,6 +2,7 @@ Event.observe(window, 'load', function(event)
 {
     activateFilters();
     activateSessionMenu();
+    activateNavigationMenu();
     activateMessages();
     activatePanelSwitches();
     activateAjaxLoaders();

@@ -231,8 +231,20 @@ ul.nav ul li {
     margin: 0;
     clear: left;}
     
-ul.nav li:hover ul {
+ul.nav li:hover ul, ul.nav li ul.expanded {
     left: auto;}
+    
+ul.nav li a.menuExpander {
+    background: url(../images/menu_arrow_down.png) center center no-repeat;
+    width: 12px;
+    height: 12px;
+    float: right;
+    text-indent: 300px;
+    overflow: hidden;
+    padding: 0.2em;}
+    
+ul.nav li a.menuExpander:hover {
+    background: #666666 url(../images/menu_arrow_down.png) center center no-repeat;}
     
 /* Paginator */
 div.paginator {
