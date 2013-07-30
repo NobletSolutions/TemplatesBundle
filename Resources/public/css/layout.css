@@ -192,6 +192,10 @@ table.formTable td {
     clear: left;
     margin: 0.3em;}
     
+.formRow span.plainText {
+    overflow: hidden;
+    display: block;}
+    
 button[type=submit] {
     float: right;}
     
