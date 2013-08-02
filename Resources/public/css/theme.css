@@ -448,6 +448,9 @@ div.filters div.filterRow input, div.filters div.filterRow select,
 div.filters div.formRow input, div.filters div.formRow select {
     width: 98%;}
     
+div.formRow.highlight {
+    background: #FFFFC0;}
+    
 div.filters button {
     float: left;
     margin: 0 0.5em;}   
@@ -464,7 +467,14 @@ div.filters a.filterSwitch, a.panelSwitch {
     padding-left: 20px;
     text-decoration: none;
     color: #cccccc;
-    font-size: 1.2em;}
+    font-size: 1.2em;
+    cursor: pointer;}
+    
+strong a.panelSwitch {
+    color: #000000;}
+    
+strong a.panelSwitch:hover {
+    color: #cccccc;}
     
 a.panelSwitch {
     font-size: inherit;}
