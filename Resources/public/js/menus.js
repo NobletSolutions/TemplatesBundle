@@ -28,25 +28,3 @@ activateSessionMenu = function()
         sm.toggleClassName('closed').setStyle({width:0});
     }
 };
-
-activateNavigationMenu = function()
-{
-    var navs = new Array();
-    $$('ul.nav ul').each(function(nav)
-    {
-        navs.push(nav);
-        var trigger = new Element('a', {'class':'menuExpander', 'title':'expand'});
-        trigger.update('expand');
-        trigger.observe('click', function(click)
-        {
-            trigger.previous('ul').toggleClassName('expanded');
-            trigger.toggleClassName('expanded');
-            navs.each(function(n)
-            {
-                if(n != nav)
-                    n.removeClassName('expanded');
-            });
-        });
-        nav.up('li').insert({'bottom':trigger});
-    });
-};
