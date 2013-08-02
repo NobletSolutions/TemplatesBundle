@@ -48,7 +48,8 @@ var activatePanelSwitches = function()
                         Effect.BlindDown(panel, options);
                 });
                 
-                panel.hide();
+                if(!panel.hasClassName('open'))
+                    panel.hide();
             }
             a.activated = true;
         }
