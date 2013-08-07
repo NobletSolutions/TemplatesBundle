@@ -6,6 +6,7 @@ Event.observe(window, 'load', function(event)
     activatePanelSwitches();
     activateAjaxLoaders();
     activateDraggables();
+    activateAjaxForms();
 });
 
 Event.observe(document, 'hinclude:success', function(event)
@@ -14,6 +15,7 @@ Event.observe(document, 'hinclude:success', function(event)
     activateAjaxLoaders();
     activateDraggables();
     activateAutocompleters();
+    activateAjaxForms();
 });
 
 Event.observe(document, 'ajaxUpdateSuccess', function(event)
@@ -22,4 +24,5 @@ Event.observe(document, 'ajaxUpdateSuccess', function(event)
     activateAjaxLoaders();
     activateDraggables();
     activateAutocompleters();
+    activateAjaxForms();
 });
