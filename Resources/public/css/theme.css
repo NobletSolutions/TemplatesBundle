@@ -6,7 +6,7 @@ th, td, p, li, label, input, textarea, select, .plainText, .richTextContainer {
     font-size: 1.2em;
 }
 
-table p, table li, li p, table label, table input, table textarea, table select, li li {
+table p, table li, li p, table label, table input, table textarea, table select, li li, li label {
     font-size: inherit;}
 
 h2 {
