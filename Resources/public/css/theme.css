@@ -479,6 +479,17 @@ div.filters a.filterSwitch:hover, a.panelSwitch:hover {
 div.filters.open a.filterSwitch, a.panelSwitch.open {
     background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/chevron.png);}
     
+a.panelSwitch.fieldSwitch {
+    color: #666666;
+    cursor: default;
+    float: right;}
+    
+a.panelSwitch.fieldSwitch:hover {    
+    color: #cccccc;}
+    
+a.panelSwitch.adminSwitch {
+    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/gear.png);}
+    
 /* Session Menu */
 #session_menu {
     -moz-border-radius: 0 10px 10px 0;

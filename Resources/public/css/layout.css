@@ -161,7 +161,7 @@ table.formTable td {
     padding: 0.5em;
     overflow: hidden;}
     
-.formRow label {
+.formRow label, .formRow div.fieldExpander label {
     color: #666666;
     font-weight: bold;
     width: 30%;
