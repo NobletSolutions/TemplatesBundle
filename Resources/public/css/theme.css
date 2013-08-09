@@ -120,6 +120,9 @@ table.dataTable td {
     padding: 0.2em 0.5em;
     text-align: right;}
     
+table.dataTable td.noBg {
+    background: transparent;}
+    
 table.dataTable td.alignLeft {
     text-align: left;}
     
