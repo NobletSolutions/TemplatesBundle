@@ -267,6 +267,12 @@ button[type=submit]:active, button[type=reset]:active, a.button:active, a.button
 button:hover, a.button:hover {
     background-color: #9B9834;}
     
+button.inlineButton {
+    display: inline-block;
+    font-size: 1em;
+    float: none;
+    margin: 0 0.5em;}
+    
 div.formRow div.formActions {
     overflow: hidden;}
     
@@ -276,6 +282,12 @@ div.formActions a {
     background-repeat: no-repeat;
     padding: 0.35em 0 0.35em 20px;
     font-size: 1.2em;}
+    
+div.inlineDate {
+    display: inline;}
+    
+div.inlineDate select[name*='[day]'] {
+    display: none;}
     
 /* Nav */
 ul.nav {
@@ -443,6 +455,13 @@ div.filters.search a.filterSwitch {
     top: 0;
     margin-top: -1.8em;}
     
+div.filters.date a.filterSwitch {
+    position: absolute;
+    right: 8em;
+    top: 0;
+    margin-top: -1.8em;
+    z-index: 50;}
+    
 div.filters div.filterCol {
     padding: 1%;
     border-left: 1px solid #555555;}
@@ -482,6 +501,9 @@ div.filters a.filterSwitch, a.panelSwitch {
     color: #cccccc;
     font-size: 1.2em;
     cursor: pointer;}
+    
+div.filters.date a.filterSwitch, div.filters.date.open a.filterSwitch {
+    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/calendar-select-month.png);}
     
 strong a.panelSwitch {
     color: #000000;}

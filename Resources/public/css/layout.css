@@ -258,6 +258,9 @@ div.filters div.filterCol {
     float: left;
     width: 28%;}
     
+div.filters div.filterCol.formRight {
+    float: right;}
+    
 div.filters div.filterRow span {
     display: inline-block;
     font-size: 1.2em;}
