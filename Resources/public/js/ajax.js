@@ -12,7 +12,7 @@ var activateAjaxLoaders = function()
                 Event.stop(event);
                 var target = $(loader.getAttribute('data-responseTarget'));
                 var url    = loader.getAttribute('href');
-                
+                target.update('<img src="/bundles/nstemplates/images/ajax-loader.gif" alt="" class="ajaxLoader" />');
                 
                 new Ajax.Updater(target, url, {
                     evalScripts: true,
