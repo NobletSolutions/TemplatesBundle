@@ -6,7 +6,7 @@ th, td, p, li, label, input, textarea, select, .plainText, .richTextContainer {
     font-size: 1.2em;
 }
 
-table p, table li, li p, table label, table input, table textarea, table select, li li, li label {
+table p, table li, li p, table label, table input, table textarea, table select, li li, li label, td td {
     font-size: inherit;}
 
 h2 {
@@ -127,6 +127,31 @@ table.dataTable td.alignLeft {
     text-align: left;}
     
 table.dataTable {}
+
+div.accountCallTable, div.callDisplayTable {
+    width: 50%;
+    float: left;
+    text-align: left;
+    margin: 0;}
+    
+div.callDisplayTable table {
+    width: 100%;}
+    
+div.jointCallTable table {
+    width: 100%;
+    text-align: left;}
+
+div.accountCallTable table, div.callDisplayTable table {
+    margin: 0;
+    border: 0;}
+
+div.accountCallTable td {
+    text-align: left;}
+    
+div.accountCallTable ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;}
     
 table.formTable td {
     background: #fcfcfc;
@@ -534,6 +559,17 @@ a.panelSwitch.fieldSwitch:hover {
     
 a.panelSwitch.adminSwitch {
     background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/gear.png);}
+    
+a.dataExpander, a.dataExpander.open {
+    background: none;
+    color: #00A2DD;
+    padding: inherit;
+    text-align: left;
+    text-decoration: underline;}
+
+a.dataExpander:hover {
+    text-decoration: none;
+    color: #00A2DD;}
     
 /* Session Menu */
 #session_menu {

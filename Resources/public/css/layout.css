@@ -140,6 +140,12 @@ table.dataTable td {
 table.formTable td {
     vertical-align: top;}
     
+div.tableRow {
+    display: table-row;}
+    
+div.tableCell {
+    display: table-cell;}
+    
 .alignLeft {
     text-align: left;}
     
