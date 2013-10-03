@@ -7,10 +7,12 @@ var activateAjaxLoaders = function()
         {
             Event.stop(event);
             var target = $(loader.getAttribute('data-responseTarget'));
+            var method = $(loader.getAttribute('data-method'))?$(loader.getAttribute('data-method')):'get';
             var url    = loader.getAttribute('href');
             target.update('<img src="/bundles/nstemplates/images/ajax-loader.gif" alt="" class="ajaxLoader" />');
             
             new Ajax.Updater(target, url, {
+                method: method,
                 evalScripts: true,
                 onSuccess: function() {
                     var successEvent = new CustomEvent('ajaxUpdateSuccess');
