@@ -12,7 +12,6 @@ Event.observe(window, 'load', function(event)
 Event.observe(document, 'hinclude:success', function(event)
 {
     activatePanelSwitches();
-    activateAjaxLoaders();
     activateDraggables();
     activateAutocompleters();
     activateAjaxForms();
@@ -21,7 +20,6 @@ Event.observe(document, 'hinclude:success', function(event)
 Event.observe(document, 'ajaxUpdateSuccess', function(event)
 {
     activatePanelSwitches();
-    activateAjaxLoaders();
     activateDraggables();
     activateAutocompleters();
     activateAjaxForms();

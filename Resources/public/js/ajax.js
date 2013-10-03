@@ -1,29 +1,22 @@
 var activateAjaxLoaders = function()
 {
-    $$('.gsAjaxLoader').each(function(loader){
-        if(!loader.active)
+    document.observe('click', function(event)
+    {
+        var loader = event.findElement('.gsAjaxLoader');
+        if(loader)
         {
-            var levent = loader.getAttribute('data-loaderEvent');
-            if(!levent)
-                levent = 'click';
+            Event.stop(event);
+            var target = $(loader.getAttribute('data-responseTarget'));
+            var url    = loader.getAttribute('href');
+            target.update('<img src="/bundles/nstemplates/images/ajax-loader.gif" alt="" class="ajaxLoader" />');
             
-            loader.observe(levent, function(event)
-            {
-                Event.stop(event);
-                var target = $(loader.getAttribute('data-responseTarget'));
-                var url    = loader.getAttribute('href');
-                target.update('<img src="/bundles/nstemplates/images/ajax-loader.gif" alt="" class="ajaxLoader" />');
-                
-                new Ajax.Updater(target, url, {
-                    evalScripts: true,
-                    onSuccess: function() {
-                        var successEvent = new CustomEvent('ajaxUpdateSuccess');
-                        document.dispatchEvent(successEvent);
-                    }
-                });
-            });
-            
-            loader.active = true;
+            new Ajax.Updater(target, url, {
+                evalScripts: true,
+                onSuccess: function() {
+                    var successEvent = new CustomEvent('ajaxUpdateSuccess');
+                    document.dispatchEvent(successEvent);
+                }
+            });            
         }
     });
 };
