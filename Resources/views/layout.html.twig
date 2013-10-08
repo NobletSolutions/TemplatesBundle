@@ -13,8 +13,10 @@
 
         <link rel="shortcut icon" href="/favicon.png" />
         {%block stylesheets %}
-            <link rel="stylesheet" type="text/css" media="screen" href="/bundles/nstemplates/css/layout.css" />
-            <link rel="stylesheet" type="text/css" media="screen" href="/bundles/nstemplates/css/theme.css" />
+            {% if not app.request.get('print') %}
+                <link rel="stylesheet" type="text/css" media="screen" href="/bundles/nstemplates/css/layout.css" />
+                <link rel="stylesheet" type="text/css" media="screen" href="/bundles/nstemplates/css/theme.css" />
+            {% endif %}
             <!--[if lte IE 8]>
             <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css" />
             <![endif]-->
