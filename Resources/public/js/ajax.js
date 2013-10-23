@@ -14,12 +14,30 @@ var activateAjaxLoaders = function()
             new Ajax.Updater(target, url, {
                 method: method,
                 evalScripts: true,
-                onSuccess: function() {
+                onComplete: function() {
                     var successEvent = new CustomEvent('ajaxUpdateSuccess');
                     document.dispatchEvent(successEvent);
                 }
             });            
         }
+    });
+    
+    document.observe('form:submit', function(event)
+    {
+        var fm = event.memo.fm;
+        
+        var target = $(fm.getAttribute('data-responseTarget'));
+        var url    = fm.getAttribute('action');
+        
+        target.update('<img src="/bundles/nstemplates/images/ajax-loader.gif" alt="" class="ajaxLoader" />');
+        fm.request({
+            onComplete: function(r)
+            {
+                target.update(r.responseText);
+                var successEvent = new CustomEvent('ajaxUpdateSuccess');
+                document.dispatchEvent(successEvent);
+            }
+        });
     });
 };
 
@@ -34,18 +52,7 @@ var activateAjaxForms = function()
             fm.observe(fevent, function(event)
             {
                 Event.stop(event);
-                var target = $(fm.getAttribute('data-responseTarget'));
-                var url    = fm.getAttribute('action');
-                
-                target.update('<img src="/bundles/nstemplates/images/ajax-loader.gif" alt="" class="ajaxLoader" />');
-                fm.request({
-                    onSuccess: function(r)
-                    {
-                        target.update(r.responseText);
-                        var successEvent = new CustomEvent('ajaxUpdateSuccess');
-                        document.dispatchEvent(successEvent);
-                    }
-                })
+                document.fire('form:submit', {'fm':fm});
             });
             
             fm.active = true;
