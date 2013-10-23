@@ -33,6 +33,7 @@ var activateAjaxLoaders = function()
         fm.request({
             onComplete: function(r)
             {
+                evalScripts: true,
                 target.update(r.responseText);
                 var successEvent = new CustomEvent('ajaxUpdateSuccess');
                 document.dispatchEvent(successEvent);
