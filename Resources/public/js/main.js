@@ -15,6 +15,7 @@ Event.observe(document, 'hinclude:success', function(event)
     activateDraggables();
     activateAutocompleters();
     activateAjaxForms();
+    activateFilters();
 });
 
 Event.observe(document, 'ajaxUpdateSuccess', function(event)
@@ -23,4 +24,5 @@ Event.observe(document, 'ajaxUpdateSuccess', function(event)
     activateDraggables();
     activateAutocompleters();
     activateAjaxForms();
+    activateFilters();
 });
