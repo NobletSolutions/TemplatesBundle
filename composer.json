@@ -2,7 +2,7 @@
     "name": "ns/templates-bundle",
     "type": "symfony-bundle",
     "description": "This Bundle provides basic templates",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Nathanael David Noblet",
