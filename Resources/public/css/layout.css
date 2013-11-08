@@ -140,6 +140,12 @@ table.dataTable td {
 table.formTable td {
     vertical-align: top;}
     
+div.tableRow {
+    display: table-row;}
+    
+div.tableCell {
+    display: table-cell;}
+    
 .alignLeft {
     text-align: left;}
     
@@ -161,7 +167,7 @@ table.formTable td {
     padding: 0.5em;
     overflow: hidden;}
     
-.formRow label {
+.formRow label, .formRow div.fieldExpander label {
     color: #666666;
     font-weight: bold;
     width: 30%;
@@ -192,6 +198,10 @@ table.formTable td {
     clear: left;
     margin: 0.3em;}
     
+.formRow span.plainText {
+    overflow: hidden;
+    display: block;}
+    
 button[type=submit] {
     float: right;}
     
@@ -203,7 +213,7 @@ button[type=submit] {
     width: 95%;}
     
 .formRow div.autocompleter a.autocompleteDelete {
-    font-size: 0.85em;}
+    font-size: 1.2em;}
     
 .formRow div.autocomplete-token {
     text-align: left;}
@@ -253,6 +263,9 @@ div.filters {
 div.filters div.filterCol {
     float: left;
     width: 28%;}
+    
+div.filters div.filterCol.formRight {
+    float: right;}
     
 div.filters div.filterRow span {
     display: inline-block;

@@ -6,7 +6,7 @@ th, td, p, li, label, input, textarea, select, .plainText, .richTextContainer {
     font-size: 1.2em;
 }
 
-table p, table li, li p, table label, table input, table textarea, table select, li li {
+table p, table li, li p, table label, table input, table textarea, table select, li li, li label, td td {
     font-size: inherit;}
 
 h2 {
@@ -86,6 +86,11 @@ h2 {
     padding: 0.5em;
     margin: 0;}
     
+.draggable .panelTitle {
+    border-top: 6px double #74A4B5;
+    background: #3D9ABB;
+    cursor: move;}
+    
 .panelContent {
     padding: 0 1em;}
     
@@ -115,10 +120,38 @@ table.dataTable td {
     padding: 0.2em 0.5em;
     text-align: right;}
     
+table.dataTable td.noBg {
+    background: transparent;}
+    
 table.dataTable td.alignLeft {
     text-align: left;}
     
 table.dataTable {}
+
+div.accountCallTable, div.callDisplayTable {
+    width: 50%;
+    float: left;
+    text-align: left;
+    margin: 0;}
+    
+div.callDisplayTable table {
+    width: 100%;}
+    
+div.jointCallTable table {
+    width: 100%;
+    text-align: left;}
+
+div.accountCallTable table, div.callDisplayTable table {
+    margin: 0;
+    border: 0;}
+
+div.accountCallTable td {
+    text-align: left;}
+    
+div.accountCallTable ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;}
     
 table.formTable td {
     background: #fcfcfc;
@@ -258,6 +291,28 @@ button[type=submit]:active, button[type=reset]:active, a.button:active, a.button
     
 button:hover, a.button:hover {
     background-color: #9B9834;}
+    
+button.inlineButton {
+    display: inline-block;
+    font-size: 1em;
+    float: none;
+    margin: 0 0.5em;}
+    
+div.formRow div.formActions {
+    overflow: hidden;}
+    
+div.formActions a {
+    display: block;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding: 0.35em 0 0.35em 20px;
+    font-size: 1.2em;}
+    
+div.inlineDate {
+    display: inline;}
+    
+div.inlineDate select[name*='[day]'] {
+    display: none;}
     
 /* Nav */
 ul.nav {
@@ -425,6 +480,13 @@ div.filters.search a.filterSwitch {
     top: 0;
     margin-top: -1.8em;}
     
+div.filters.date a.filterSwitch {
+    position: absolute;
+    right: 8em;
+    top: 0;
+    margin-top: -1.8em;
+    z-index: 50;}
+    
 div.filters div.filterCol {
     padding: 1%;
     border-left: 1px solid #555555;}
@@ -443,6 +505,9 @@ div.filters div.filterRow input, div.filters div.filterRow select,
 div.filters div.formRow input, div.filters div.formRow select {
     width: 98%;}
     
+div.formRow.highlight {
+    background: #FFFFC0;}
+    
 div.filters button {
     float: left;
     margin: 0 0.5em;}   
@@ -459,7 +524,17 @@ div.filters a.filterSwitch, a.panelSwitch {
     padding-left: 20px;
     text-decoration: none;
     color: #cccccc;
-    font-size: 1.2em;}
+    font-size: 1.2em;
+    cursor: pointer;}
+    
+div.filters.date a.filterSwitch, div.filters.date.open a.filterSwitch {
+    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/calendar-select-month.png);}
+    
+strong a.panelSwitch {
+    color: #000000;}
+    
+strong a.panelSwitch:hover {
+    color: #cccccc;}
     
 a.panelSwitch {
     font-size: inherit;}
@@ -473,6 +548,28 @@ div.filters a.filterSwitch:hover, a.panelSwitch:hover {
     
 div.filters.open a.filterSwitch, a.panelSwitch.open {
     background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/chevron.png);}
+    
+a.panelSwitch.fieldSwitch {
+    color: #666666;
+    cursor: default;
+    float: right;}
+    
+a.panelSwitch.fieldSwitch:hover {    
+    color: #cccccc;}
+    
+a.panelSwitch.adminSwitch {
+    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/gear.png);}
+    
+a.dataExpander, a.dataExpander.open {
+    background: none;
+    color: #00A2DD;
+    padding: inherit;
+    text-align: left;
+    text-decoration: underline;}
+
+a.dataExpander:hover {
+    text-decoration: none;
+    color: #00A2DD;}
     
 /* Session Menu */
 #session_menu {
@@ -567,6 +664,34 @@ div.contact p.contactRow {
     
 div.contact.collapse {
     left: -999em;}
+
+/* Errors */
+div.fieldErrors {
+    clear: both;
+    color: #BA2200;
+    border: 1px solid #BA2200;
+    padding: 0.2em 0.5em 0.2em 24px;
+    margin: 0.2em 0;
+    background: #F2E8E5 url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/exclamation.png) 3px center no-repeat;}
+    
+div.formErrors {
+    background: #F2E8E5;
+    padding: 0.5em 0.5em 0.5em 30px;
+    font-size: 1.2em;}
+    
+div.formErrors h3 {
+    padding-left: 24px;
+    margin: 0.2em 0 0.2em -24px;
+    background: #F2E8E5 url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/exclamation.png) 3px center no-repeat;}
+        
+div.fieldErrors + input {
+    box-shadow: inset 0 0 4px #BA2200;}
+    
+div.fieldErrors span.error {
+    display: block;}
+    
+div.formErrors span.error {
+    margin: 0.2em;}
     
 /* Calls */
 div.itemExpander h3 a {

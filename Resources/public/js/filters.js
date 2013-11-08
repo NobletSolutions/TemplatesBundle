@@ -4,33 +4,38 @@ activateFilters = function()
     
     filters.each(function(el)
     {
-        var f  = el.down('form');
-        var sw = el.down('a.filterSwitch');
-        
-        if(f && sw)
+        if(!el.active)
         {
-            sw.observe('click', function(ev)
-            {
-                options = {
-                    duration: 0.5,
-                    afterFinish: function()
-                    {
-                        el.toggleClassName('open').toggleClassName('closed');
-                    }
-                };
-                
-                if(el.hasClassName('closed'))
-                    Effect.BlindDown(f, options);
-                else
-                    Effect.BlindUp(f, options);            
-                
-                Event.stop(ev);
-            });
+            var f  = el.down('form');
+            var sw = el.down('a.filterSwitch');
             
-            if(!el.hasClassName('open'))
+            if(f && sw)
             {
-                el.addClassName('closed');
-                f.hide();
+                sw.observe('click', function(ev)
+                {
+                    options = {
+                        duration: 0.5,
+                        afterFinish: function()
+                        {
+                            el.toggleClassName('open').toggleClassName('closed');
+                        }
+                    };
+                    
+                    if(el.hasClassName('closed'))
+                        Effect.BlindDown(f, options);
+                    else
+                        Effect.BlindUp(f, options);            
+                    
+                    Event.stop(ev);
+                });
+                
+                if(!el.hasClassName('open'))
+                {
+                    el.addClassName('closed');
+                    f.hide();
+                }
+                
+                el.active = true;
             }
         }
     });

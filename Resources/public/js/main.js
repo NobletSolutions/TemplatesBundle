@@ -5,16 +5,24 @@ Event.observe(window, 'load', function(event)
     activateMessages();
     activatePanelSwitches();
     activateAjaxLoaders();
+    activateDraggables();
+    activateAjaxForms();
 });
 
-Event.observe(document, 'hIncludeSuccess', function(event)
+Event.observe(document, 'hinclude:success', function(event)
 {
     activatePanelSwitches();
-    activateAjaxLoaders();
+    activateDraggables();
+    activateAutocompleters();
+    activateAjaxForms();
+    activateFilters();
 });
 
 Event.observe(document, 'ajaxUpdateSuccess', function(event)
 {
     activatePanelSwitches();
-    activateAjaxLoaders();
+    activateDraggables();
+    activateAutocompleters();
+    activateAjaxForms();
+    activateFilters();
 });
