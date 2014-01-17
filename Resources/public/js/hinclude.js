@@ -64,10 +64,10 @@ var hinclude;
         if (include[1].status === 200 || include[1].status === 304) {
             include[0].innerHTML = include[1].responseText;
             var scripts = include[0].getElementsByTagName('script');
-            
+
             for (var i=0;i<scripts.length;i++)
                 eval(scripts[i].innerHTML);
-            
+
             document.fire('hinclude:success');
         }
         include[0].className = hinclude.classprefix + include[1].status;
@@ -199,7 +199,7 @@ var hinclude;
         /*@cc_on
         document.write(
           "<scr"
-            + "ipt id=__ie_onload defer src=javascript:void(0)><\/scr"
+            + "ipt id=__ie_onload defer src='//:'><\/scr"
             + "ipt>"
         );
         var script = document.getElementById("__ie_onload");
@@ -209,6 +209,7 @@ var hinclude;
           }
         };
         @*/
+        // for Safari
         if (/WebKit/i.test(navigator.userAgent)) { // sniff
           window.__load_timer = setInterval(function () {
             if (/loaded|complete/.test(document.readyState)) {
