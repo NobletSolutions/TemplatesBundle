@@ -511,6 +511,10 @@ div.formRow.highlight {
 div.filters button {
     float: left;
     margin: 0 0.5em;}   
+
+div.filters a {
+    float: left;
+    margin: 0 0.5em;}   
     
 div.filters button.filter {
     background: #7FB23C url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/magnifier.png) 95% center no-repeat;
