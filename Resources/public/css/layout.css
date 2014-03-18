@@ -197,6 +197,11 @@ div.tableCell {
     float: left;
     clear: left;
     margin: 0.3em;}
+
+.formRow label + input[type=radio], .formRow label + input[type=checkbox]
+{
+    clear: none;
+}
     
 .formRow span.plainText {
     overflow: hidden;

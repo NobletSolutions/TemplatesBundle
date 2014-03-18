@@ -261,6 +261,9 @@ button, a.button {
     background: #B2AE3C 95% center no-repeat;
     cursor: default;
     display: inline-block;}
+
+td button, td a.button {
+    font-size: 1.16em;}
     
 button[type=reset], button[type=submit], button.cancel, a.button.submit, a.button.reset, a.button.cancel {
     padding-right: 22px;}
