@@ -326,3 +326,37 @@ div.filters a.filterSwitch {
 #session_menu_content ul.nav a, #session_menu_content ul.nav li > span {
     padding: 0.2em 0.5em;
     display: block;}
+
+/* Tabs */
+div.tabs {
+    background: #BBBDC0;
+}
+
+div.tabs ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 1em 0 0 0;
+}
+
+div.tabs li {
+    float: left;
+    margin: 0 0.2em;
+}
+
+div.tabs a {
+    background: #DBDCDC;
+    color: #666666;
+    text-decoration: none;
+    padding: 0.2em 0.5em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+div.tabs a:hover {
+    background: #E4E5E5;
+}
+
+div.tabs a.active {
+    background: #EBECEC;
+}

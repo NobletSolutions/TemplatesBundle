@@ -103,3 +103,33 @@ var activateDraggables = function()
         };
     });
 };
+
+var activateTabs = function()
+{
+    $$('div.tab').each(function(t)
+    {
+        if(!t.hasClassName('active'))
+            t.hide();
+    });
+    
+    $$('div.tabs a').each(function(a)
+    {
+        a.observe('click', function()
+        {
+            if(!a.hasClassName('active'))
+            {
+                $(a.getAttribute('data-tgt')).show();
+                a.addClassName('active');
+                
+                $$('div.tabs a').each(function(r)
+                {
+                    if(r != a)
+                    {
+                        r.removeClassName('active');
+                        $(r.getAttribute('data-tgt')).hide();
+                    }
+                });
+            }
+        });
+    });
+};

@@ -7,6 +7,7 @@ Event.observe(window, 'load', function(event)
     activateAjaxLoaders();
     activateDraggables();
     activateAjaxForms();
+    activateTabs();
 });
 
 Event.observe(document, 'hinclude:success', function(event)
