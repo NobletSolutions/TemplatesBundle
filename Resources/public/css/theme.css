@@ -118,7 +118,7 @@ table.dataTable td {
     border-width: 1px 2px;
     background: #E6E7E8;
     padding: 0.2em 0.5em;
-    text-align: right;}
+    text-align: center;}
     
 table.dataTable td.noBg {
     background: transparent;}
@@ -165,6 +165,10 @@ table.dataTable td.null, table.dataTable th.null {
 table.dataTable td.highlight {
     background: #E5E286;
     font-weight: bold;}
+
+table.dataTable td[data-group="TT"].highlight {
+    background: #86C6E5;
+}
     
 table.zebra tr.even td {
     background: #F1F1F2;}
