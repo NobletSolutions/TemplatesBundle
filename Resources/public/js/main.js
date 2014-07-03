@@ -8,6 +8,7 @@ Event.observe(window, 'load', function(event)
     activateDraggables();
     activateAjaxForms();
     activateTabs();
+    activatePopups();
 });
 
 Event.observe(document, 'hinclude:success', function(event)

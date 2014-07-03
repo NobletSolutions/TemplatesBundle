@@ -21,6 +21,31 @@ var activateMessages = function()
     }    
 };
 
+var activatePopups = function()
+{
+    $$('body')[0].insert('<div id="modalWindow" style="display:none;"><a id="modalClose">X</a><div id="modalContent"></div></div>');
+    $('modalClose').observe('click', function(event)
+    {
+        $('modalWindow').hide();
+    });
+    
+    $$('a.popup').each(function(a)
+    {
+        a.observe('click', function(event)
+        {
+            new Ajax.Updater('modalContent', a.href, {
+                onComplete: function()
+                {
+                    $('modalWindow').show();
+                }
+            });
+        
+            Event.stop(event);
+            return false;
+        });
+    });
+}
+
 var activatePanelSwitches = function()
 {
     $$('a.panelSwitch').each(function(a)
