@@ -118,16 +118,21 @@ var activateTabs = function()
         {
             if(!a.hasClassName('active'))
             {
-                $(a.getAttribute('data-tgt')).show();
+                var id = a.getAttribute('data-tgt');
+                $(id).show();
                 a.addClassName('active');
                 
-                $$('div.tabs a').each(function(r)
+                a.up('ul').select('a').each(function(r)
                 {
                     if(r != a)
                     {
                         r.removeClassName('active');
-                        $(r.getAttribute('data-tgt')).hide();
                     }
+                });
+                
+                a.up('div.tabs').up().childElements().grep(new Selector('div.tab:not([id='+id+'])')).each(function(el)
+                {
+                    el.hide();
                 });
             }
         });
