@@ -28,7 +28,7 @@ var activatePopups = function()
     {
         $('modalWindow').hide();
     });
-    
+
     $$('a.popup').each(function(a)
     {
         a.observe('click', function(event)
@@ -39,7 +39,21 @@ var activatePopups = function()
                     $('modalWindow').show();
                 }
             });
-        
+
+            Event.stop(event);
+            return false;
+        });
+    });
+
+    $$('a.inlinePopup').each(function(a)
+    {
+        a.observe('click', function(event)
+        {
+            var source = $(a.readAttribute('data-source'));
+
+            $('modalContent').update(source.innerHTML);
+            $('modalWindow').show();
+
             Event.stop(event);
             return false;
         });
