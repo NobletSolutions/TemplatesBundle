@@ -170,7 +170,7 @@ div.tableCell {
 .formRow label, .formRow div.fieldExpander label {
     color: #666666;
     font-weight: bold;
-    width: 30%;
+    min-width: 30%;
     float: left;}
     
 .formRow label.clear {
