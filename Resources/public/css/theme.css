@@ -266,6 +266,15 @@ button, a.button {
     cursor: default;
     display: inline-block;}
 
+.panelTitle button, .panelTitle a.button {
+    float: right;
+    font-size: 1em;
+    padding: 0.1em 0.3em;
+    border-width: 2px;
+    margin: 0;
+    display: inline;
+}
+
 td button, td a.button {
     font-size: 1.16em;}
     
