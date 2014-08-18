@@ -475,6 +475,10 @@ div.filters {
     background: #4A4A4C;
     color: #cccccc;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);}
+
+div.filters form > h3 {
+    margin-left: 1em;
+}
     
 div.filters.search {
     position: absolute;
@@ -496,7 +500,8 @@ div.filters.date a.filterSwitch {
     
 div.filters div.filterCol {
     padding: 1%;
-    border-left: 1px solid #555555;}
+    border-left: 1px solid #555555;
+    min-width: 18em;}
     
 div.filters div.filterRow,  div.filters div.formRow {
     margin: 0.5em 0;

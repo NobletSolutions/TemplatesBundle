@@ -6,25 +6,43 @@ activateFilters = function()
     {
         if(!el.active)
         {
-            var f  = el.down('form');
+            var f  = el.select('form');
             var sw = el.down('a.filterSwitch');
             
             if(f && sw)
             {
                 sw.observe('click', function(ev)
                 {
-                    options = {
+                    var open = {
                         duration: 0.5,
                         afterFinish: function()
                         {
-                            el.toggleClassName('open').toggleClassName('closed');
+                            el.addClassName('open').removeClassName('closed');
+                        }
+                    };
+                    
+                    var closed = {
+                        duration: 0.5,
+                        afterFinish: function()
+                        {
+                            el.removeClassName('open').addClassName('closed');
                         }
                     };
                     
                     if(el.hasClassName('closed'))
-                        Effect.BlindDown(f, options);
+                    {
+                        f.each(function(fe)
+                        {
+                            Effect.BlindDown(fe, open);
+                        });
+                    }
                     else
-                        Effect.BlindUp(f, options);            
+                    {
+                        f.each(function(fe)
+                        {
+                            Effect.BlindUp(fe, closed); 
+                        });
+                    }
                     
                     Event.stop(ev);
                 });
@@ -32,7 +50,10 @@ activateFilters = function()
                 if(!el.hasClassName('open'))
                 {
                     el.addClassName('closed');
-                    f.hide();
+                    f.each(function(fe)
+                    {
+                        fe.hide();
+                    });
                 }
                 
                 el.active = true;
