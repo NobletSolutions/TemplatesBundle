@@ -283,18 +283,18 @@ button[type=reset], button[type=submit], button.cancel, a.button.submit, a.butto
     
 button[type=reset], a.button.reset {
     background-color: #3C6BB2;
-    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow_circle_315.png);}
+    background-image: url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow_circle_315.png);}
     
 button.cancel, a.button.cancel {
     background-color: #B2653C;
-    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/cross_circle_frame.png);}
+    background-image: url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/cross_circle_frame.png);}
     
 button.cancel:hover, a.button.cancel:hover {
     background-color: #995533;}
     
 button[type=submit], a.button.submit {
     background-color: #7FB23C;
-    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/tick_circle_frame.png);}
+    background-image: url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/tick_circle_frame.png);}
     
 button[type=submit]:hover, a.button.submit:hover {
     background-color: #72A036;}
@@ -462,21 +462,21 @@ div.paginator a.current {
     font-weight: normal;}
     
 div.paginator a.paginatorFirst {
-    background: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow-stop-180.png) left center no-repeat;
+    background: url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow-stop-180.png) left center no-repeat;
     padding-left: 20px;}
     
 div.paginator a.paginatorPrev {
     border-right: 1px solid #F99D27;
-    background: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow-180.png) left center no-repeat;
+    background: url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow-180.png) left center no-repeat;
     padding-left: 20px;}
     
 div.paginator a.paginatorNext {
     border-left: 1px solid #F99D27;
-    background: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow.png) right center no-repeat;
+    background: url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow.png) right center no-repeat;
     padding-right: 20px;}
     
 div.paginator a.paginatorLast {
-    background: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow-stop.png) right center no-repeat;
+    background: url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/arrow-stop.png) right center no-repeat;
     padding-right: 20px;}
     
 /* Filters */
@@ -538,14 +538,14 @@ div.filters a {
     margin: 0 0.5em;}   
     
 div.filters button.filter {
-    background: #7FB23C url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/magnifier.png) 95% center no-repeat;
+    background: #7FB23C url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/magnifier.png) 95% center no-repeat;
     padding-right: 20px;}
     
 div.filters button.filter:hover {
     background-color: #72A036;}
     
 div.filters a.filterSwitch, a.panelSwitch {
-    background: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/chevron-expand.png) 3px center no-repeat;
+    background: url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/chevron-expand.png) 3px center no-repeat;
     padding-left: 20px;
     text-decoration: none;
     color: #cccccc;
@@ -553,7 +553,7 @@ div.filters a.filterSwitch, a.panelSwitch {
     cursor: pointer;}
     
 div.filters.date a.filterSwitch, div.filters.date.open a.filterSwitch {
-    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/calendar-select-month.png);}
+    background-image: url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/calendar-select-month.png);}
     
 strong a.panelSwitch {
     color: #000000;}
@@ -572,7 +572,7 @@ div.filters a.filterSwitch:hover, a.panelSwitch:hover {
     color: #ffffff;}
     
 div.filters.open a.filterSwitch, a.panelSwitch.open {
-    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/chevron.png);}
+    background-image: url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/chevron.png);}
     
 a.panelSwitch.fieldSwitch {
     color: #666666;
@@ -583,7 +583,7 @@ a.panelSwitch.fieldSwitch:hover {
     color: #cccccc;}
     
 a.panelSwitch.adminSwitch {
-    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/gear.png);}
+    background-image: url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/gear.png);}
     
 a.dataExpander, a.dataExpander.open {
     background: none;
@@ -613,7 +613,7 @@ a.dataExpander:hover {
     -o-border-radius: 0 10px 10px 0;
     -webkit-border-radius: 0 10px 10px 0;
     border-radius: 0 10px 10px 0;
-    background: #ffffff url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/control-skip-180.png) center center no-repeat;
+    background: #ffffff url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/control-skip-180.png) center center no-repeat;
     width: 18px;
     height: 18px;
     outline: none;}
@@ -626,7 +626,7 @@ a.dataExpander:hover {
     position: absolute;}
     
 #session_menu.closed #session_trigger {
-    background-image: url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/control-skip.png);
+    background-image: url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/control-skip.png);
     margin-left: -10px;
     position: absolute;
     -moz-border-radius: 10px;
@@ -697,7 +697,7 @@ div.fieldErrors {
     border: 1px solid #BA2200;
     padding: 0.2em 0.5em 0.2em 24px;
     margin: 0.2em 0;
-    background: #F2E8E5 url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/exclamation.png) 3px center no-repeat;}
+    background: #F2E8E5 url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/exclamation.png) 3px center no-repeat;}
     
 div.formErrors {
     background: #F2E8E5;
@@ -707,7 +707,7 @@ div.formErrors {
 div.formErrors h3 {
     padding-left: 24px;
     margin: 0.2em 0 0.2em -24px;
-    background: #F2E8E5 url(http://cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/exclamation.png) 3px center no-repeat;}
+    background: #F2E8E5 url(//cdn1.iconfinder.com/data/icons/fugue/icon_shadowless/exclamation.png) 3px center no-repeat;}
         
 div.fieldErrors + input {
     box-shadow: inset 0 0 4px #BA2200;}
